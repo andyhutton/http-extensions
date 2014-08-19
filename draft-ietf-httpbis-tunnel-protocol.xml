@@ -4,8 +4,10 @@
 <!DOCTYPE rfc [
 <!-- One method to get references from the online citation libraries.
      There has to be one entity for each item to be referenced.
-     An alternate method (rfc include) is described in the references. --><!ENTITY RFC2119 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.2119.xml">
+     An alternate method (rfc include) is described in the references. -->
+<!ENTITY RFC2119 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.2119.xml">
 <!ENTITY RFC3986 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.3986.xml">
+<!ENTITY RFC5234 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.5234.xml">
 <!ENTITY RFC5246 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.5246.xml">
 <!ENTITY RFC7230 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7230.xml">
 <!ENTITY RFC7231 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7231.xml">
@@ -110,8 +112,9 @@
         requests that the recipient establish a tunnel to the identified origin
         server and thereafter forward packets, in both directions, until the
         tunnel is closed. Such tunnels are commonly used to create end-to-end
-        virtual connections, through one or more proxies, which may then be
-        secured using TLS (Transport Layer Security, <xref target="RFC5246"/>).
+        virtual connections, through one or more proxies.  These are then
+        commonly secured using TLS (Transport Layer Security, <xref
+        target="RFC5246"/>).
       </t>
       <t>
         The HTTP Tunnel-Protocol header field identifies the protocol that will
@@ -153,9 +156,9 @@
 
      <section title="Syntax">
         <t>
-          The ABNF (Augmented Backus-Naur Form) syntax for the Tunnel-Protocol
-          header field is given below.  It is based on the Generic Grammar
-          defined in Section 2 of <xref target="RFC7230"/>.
+          The ABNF (Augmented Backus-Naur Form) syntax <xref target="RFC5234"/>
+          for the Tunnel-Protocol header field is given below.  It is based on
+          the Generic Grammar defined in Section 2 of <xref target="RFC7230"/>.
         </t>
         <figure>
           <artwork type="abnf"><![CDATA[
@@ -230,6 +233,7 @@ Tunnel-Protocol: turn
     <references title="Normative References">
       &RFC2119;
       &RFC3986;
+      &RFC5234;
       &RFC7230;
       &RFC7231;
       &RFC7301;
